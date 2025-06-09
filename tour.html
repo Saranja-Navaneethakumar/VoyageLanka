@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tours - Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="travel.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar-container">
+            <div id="header-placeholder"></div>
+        </div>
+
+        <div class="tour-header">
+            <div class="tour-header-content">
+                <h1>Unlock Sri Lanka's Best-Kept Travel Secrets</h1>
+            </div>
+        </div>
+
+        <div class="tour-container">
+            <div class="tour-grid" id="tour-grid">
+                <!-- Tours will be loaded here dynamically by JavaScript -->
+            </div>
+            <div class="tour-pagination">
+                <button id="tour-prev-btn" class="tour-pagination-btn" disabled><i class="fa-solid fa-arrow-left-long"></i></button>
+                <span id="tour-page-info"></span>
+                <button id="tour-next-btn" class="tour-pagination-btn"><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </div>
+        
+        <div id="login-modal-container"></div>
+        <div class="footer-container">
+            <div id="footer-placeholder"></div>
+        </div>
+        <script type="module" src="tour.js"></script>
+        <!-- <script type="module" src="favourites.js"></script> -->
+    </body>
+</html>

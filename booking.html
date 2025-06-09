@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booking - Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body class="booking">
+        <div class="nav-bar-container">
+            <div id="header-placeholder"></div>
+        </div>
+
+        <div class="booking-container">
+            <h2>Book your dream journey</h2>
+            <div id="success-container">
+                <div id="booking-success-msg" class="booking-success-msg">
+                </div>
+            </div>
+            <div id="error-container">
+                <div id="booking-error-msg" class="booking-error-msg">
+                </div>
+            </div>
+            <form id="booking-form">
+
+                <div class="booking-group">
+                    <label for="name"><i class="fa-solid fa-user"></i> Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="error-msg" id="name-error"></div>
+
+                <div class="booking-group">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="error-msg" id="email-error"></div>
+
+                <div class="booking-group">
+                    <label for="phone"><i class="fa-solid fa-phone"></i> Conatct No</label>
+                    <input type="tel" id="phone" name= "phone" placeholder="Conatct No" required>
+                </div>
+                <div class="error-msg" id="phone-error"></div>
+
+                <div class="booking-group">
+                    <label for="tour"><i class="fa-solid fa-map"></i> Selected Tour</label>
+                    <input type="text" id="tour" name="tour" placeholder="Tour" readonly>
+                </div>
+                <div class="error-msg" id="tour-error"></div>
+
+                <div class="booking-group">
+                    <label for="price"><i class="fa-solid fa-money-bill"></i> Price</label>
+                    <input type="text" id="price" name="price" placeholder="Price" readonly>
+                </div>
+                <div class="error-msg" id="price-error"></div>
+
+                <div class="booking-group">
+                    <label for="strat-date"><i class="fa-solid fa-calendar"></i> Start Date</label>
+                    <input type="date" id="date" name="date" placeholder="Start Date" required>
+                </div>
+                <div class="error-msg" id="date-error"></div>
+                
+                <div class="booking-group">
+                    <label for="budget"><i class="fa-solid fa-money-bill-wave"></i> Budget (GBP)</label>
+                    <input type="number" id="budget" name="budget" placeholder="Bugdet" min="100" required>
+                </div>
+                <div class="error-msg" id="budget-error"></div>
+
+                <div class="booking-group">
+                    <label for="guests"><i class="fa-solid fa-users"></i> Number of Adults</label>
+                    <input type="number" id="guests" name="guests" min="1" placeholder="Adults" required>
+                </div>
+                <div class="error-msg" id="guests-error"></div>
+
+                <div class="booking-group">
+                    <label for="children"><i class="fa-solid fa-child"></i> Number of Children</label>
+                    <input type="number" id="children" name="children" placeholder="Children">
+                </div>
+                <div class="error-msg" id="children-error"></div>
+
+                <div class="booking-group">
+                    <label for="infants"><i class="fa-solid fa-baby"></i> Number of Infants</label>
+                    <input type="number" id="infants" name="infants" placeholder="Infants">
+                </div>
+                <div class="error-msg" id="infants-error"></div>
+
+                <div class="booking-group">
+                    <label for="hotel-type"><i class="fa-solid fa-hotel"></i> Hotel Type</label>
+                    <select id="hotel-type" name="hotel-type" required>
+                        <option value="">Select Hotel type</option>
+                        <option value="budget">Budget</option>
+                        <option value="standard">Standard</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+                </div>
+                <div class="error-msg" id="hotel-error"></div>
+
+                <div class="booking-group">
+                    <label><i class="fa-solid fa-credit-card"></i> Payment Method</label>
+                    <div class="booking-payment" style="width: 55%;">
+                       
+                    <div class="booking-radio">
+                        <input type="radio" id="visa" name="payment-method" value="Visa" required>
+                        <label for="visa"><i class="fa-brands fa-cc-visa"></i> Visa</label>
+                    </div>
+                    <div class="booking-radio">
+                        <input type="radio" id="mastercard" name="payment-method" value="MasterCard" required>
+                        <label for="mastercard"><i class="fa-brands fa-cc-mastercard"></i> MasterCard</label>
+                    </div>
+                    <div class="booking-radio">
+                        <input type="radio" id="paypal" name="payment-method" value="PayPal" required>
+                        <label for="paypal"><i class="fa-brands fa-cc-paypal"></i> PayPal</label>
+                    </div>
+                    <div class="booking-radio">
+                        <input type="radio" id="cash" name="payment-method" value="Cash" required>
+                        <label for="cash"><i class="fa-solid fa-money-bill"></i> Cash</label>
+                    </div>
+                    </div>
+                </div>
+                <div class="error-msg" id="payment-error"></div>
+                
+
+                <div class="booking-group">
+                    <label for="requests"><i class="fa-solid fa-comments"></i> Special Request</label>
+                    <textarea id="requests" name="requests" placeholder="Add any special requirements" rows="5"></textarea>
+                </div>
+                <div class="error-msg" id="error-msg"></div>
+
+                <div class="booking-group">
+                   <button type="submit" class="booking-btn" id="booking-btn"><i class="fa-solid fa-ticket"></i> Book Now</button>
+                </div>
+            </form>
+        </div>
+        <div id="login-modal-container"></div>
+        <div class="footer-container">
+            <div id="footer-placeholder"></div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+        <script type="text/javascript" src="travel.js"></script>
+        <script type="module" src="booking.js"></script>
+    </body>
+</html>

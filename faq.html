@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Voyage Lanka</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="travel.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar-container">
+        <div id="header-placeholder"></div>
+    </div>
+
+    <main class="faq-container">
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>What is Voyage Lanka?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Voyage Lanka is a premier travel agency that specializes in organizing unforgettable travel experiences
+                in Sri Lanka, offering a range of tours from cultural heritage to adventure and relaxation.
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>How can I book a tour?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                You can book a tour directly through our website by selecting a tour package and clicking "Learn More"
+                to proceed to the booking page. Alternatively, you can contact our customer service team for assistance.
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>What payment methods do you accept?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                We accept major credit cards (Visa, MasterCard), PayPal, and bank transfers for all tour bookings.
+                Details will be shared during the booking process.
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>Can I customize a tour package?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Absolutely! We offer custom tour packages tailored to your preferences. Contact our team with your
+                specific requirements, and we’ll create a personalized itinerary just for you.
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>What is your cancellation policy?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Our cancellation policy varies depending on the tour package. Generally, cancellations made 30 days
+                prior to the tour are eligible for a full refund. For more details, refer to the cancellation terms
+                provided during booking.
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>Do you offer group discounts?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes, we offer group discounts for bookings with more than five people. Contact us for special rates and
+                arrangements for larger groups.
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question">
+                <span>What should I pack for my trip?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                It depends on your destination and activities. Generally, we recommend lightweight clothing, comfortable
+                shoes, sunscreen, a hat, and essentials like a first-aid kit. Our team will provide a detailed packing
+                list before your trip.
+            </div>
+        </div>
+    </main>
+    <div id="login-modal-container"></div>
+    <div class="footer-container">
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                icon.classList.toggle('open');
+            });
+        });
+    </script>
+    <style>
+        .faq-container {
+            margin-top: 130px;
+            margin-bottom: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin: 40px auto; */
+            padding: 50px;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 28px;
+            color: #002727;
+            margin-bottom: 30px;
+        }
+
+        .faq-section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+
+        .faq-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #e8f6f5;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            margin-top: 5px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #348b7b;
+            border-radius: 5px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question i.open {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 15px;
+                margin: 20px;
+            }
+
+            .faq-title {
+                font-size: 24px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .faq-answer {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faq-container {
+                padding: 10px;
+            }
+
+            .faq-title {
+                font-size: 20px;
+            }
+
+            .faq-question {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .faq-answer {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</body>
+
+</html>

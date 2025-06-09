@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up - Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="travel.js"></script>
+        <script type="module" src="signup.js" defer></script>
+    </head>
+    <body class="signup-body">
+        <div class="nav-bar-container">
+            <div id="header-placeholder"></div>
+        </div>
+
+        <div class="signup-container">
+            <div class="signupForm-container">
+                <h2>Join with Voyage Lanka</h2>
+                <p>Create an account and start your journey today.</p>
+                <form id="signup-form" action="">
+                    <div class="signup-group">
+                        <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="signup-group">
+                        <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create Password" required>
+                    </div>
+                    <div class="signup-group">
+                        <label for="confirm-password"><i class="fa-solid fa-key"></i> Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                    </div>
+                    <div id="error-container">
+                        <div id="signup-error-msg" class="signup-error-msg">
+                        </div>
+                    </div>
+                    <div id="success-container">
+                        <div id="signup-success-msg" class="signup-success-msg">
+                        </div>
+                    </div>
+                    <div class="signup-loader" id="signup-loader">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                    </div>
+                    
+                    <button type="submit" id="signup-btn" class="signup-btn"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+                </form>
+                <div class="signup-footer">
+                    Already have an account? <button onclick="openLoginModal()"><i class="fa-solid fa-user"></i> Log in</button>
+                </div>
+            </div>
+
+            <div class="signup-img-container">
+                <img src="images/tour/srilanka-1.jpg" alt="Sri Lanka">
+            </div>
+            
+        </div>
+        <div id="login-modal-container"></div>
+        <div class="footer-container">
+            <div id="footer-placeholder"></div>
+        </div>
+    </body>
+</html>

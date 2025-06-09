@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="images\world.png" width="40px">
+            <a class="logo-text" href="index.html">Voyage Lanka</a>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul id="menu-items">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="destination.html"><i class="fa-solid fa-location-dot"></i> Destinations</a></li>
+            <li><a href="tour.html"><i class="fa-solid fa-plane-departure"></i> Tours</a></li>
+            <li><a href="about-us.html"><i class="fa-solid fa-address-card"></i> About Us</a></li>
+            <li><a href="contact-us.html"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+            <li><button id="login-Button" onclick="openLoginModal()" style="width:auto;"><i class="fa-solid fa-user"></i> Login</button></li>
+            <li><button id="sign-out-Button" style="width:auto;"><i class="fa-solid fa-sign-out"></i> Sign Out</button>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button id="dropdown-btn" onclick="openDropDown()" class="dropdown-btn">
+                        <i class="fa-solid fa-caret-down"></i> More
+                    </button>
+                    <div id="dropdown-content" class="dropdown-content">
+                        <a href="favourites.html"><i class="fa-solid fa-heart"></i> Favorites</a>
+                        <a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                        <a href="sitemap.html"><i class="fa-solid fa-sitemap"></i> Sitemap</a>
+                        <a href="hotels.html"><i class="fa-solid fa-hotel"></i> Hotels</a>
+                        <a href="feedback.html"><i class="fa-solid fa-pen-nib"></i> Feedback</a>
+
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+    </nav>
+    <script type="module" src="signout.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navCheckbox = document.getElementById("check");
+            const menuItems = document.getElementById("menu-items");
+
+            // Close menu when clicking a menu item
+            menuItems.addEventListener("click", () => {
+                if (navCheckbox.checked) {
+                    navCheckbox.checked = false;
+                }
+            });
+
+            // Close menu when clicking outside
+            document.body.addEventListener("click", (e) => {
+                if (navCheckbox.checked && !e.target.closest("nav")) {
+                    navCheckbox.checked = false;
+                }
+            });
+        });
+
+
+    </script>

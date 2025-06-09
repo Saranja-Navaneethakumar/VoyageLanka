@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tour Detail - Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="travel.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar-container">
+            <div id="header-placeholder"></div>
+        </div>
+        <div class="tour-detail-container">
+            <div class="tour-detail">
+                <h1 id="tour-title">Title</h1>
+                <div class="tour-img">
+                    <img id="tour-image" src="" alt="Tour Image">
+                </div>
+                
+                <p id="tour-description">description</p>
+
+                <div class="highlights">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Highlights</h3>
+                    <ul id="tour-highlights"></ul>
+                </div>
+                <div class="itinerary">
+                    <h3><i class="fa-solid fa-clipboard-list"></i> Itinerary</h3>
+                    <ul id="tour-itinerary"></ul>
+                </div>
+                <p id="tour-price">Price : £XXX</p>
+                <div class="book-now">
+                    <button type="submit" id="book-now-btn" class="book-now-btn"><i class="fa-solid fa-plane"></i>  Book Now</button>
+                </div>
+                
+
+                <h3><i class="fa-solid fa-camera-retro"></i> Gallery</h3>
+                <div id="gallery" class="image-gallery"></div>
+            </div>
+        </div>
+        <div id="login-modal-container"></div>
+        <div class="footer-container">
+            <div id="footer-placeholder"></div>
+        </div>
+        <script type="module" src="tour-detail.js"></script>
+        <script type="module" src="tour.js"></script>
+       
+    </body>
+</html>

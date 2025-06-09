@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <script type="text/javascript" src="travel.js"></script> -->
+        <script type="module" src="login.js" defer></script>
+    </head>
+    <body>
+        <div id="login-modal" class="login-modal">
+            <form class="login-modal-content login-animate" id="login-form">
+                <div class="login-img-container">
+                    <span onclick="closeLoginModal()" class="close" title="Close Login Modal">&times;</span>
+                    <img src="images/profile.png" alt="login-avatar" class="login-avatar">
+                </div>
+
+                <div class="login-container">
+                    <h2 class="login-title">Welcome to Voyage Lanka!</h2>
+                    <div class="input-container">
+                        <div class="input-group">
+                            <label for="username"><i class="fa-solid fa-user"></i></label>
+                            <input type="email" placeholder="Email" name="login-email" id="login-email" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="password"><i class="fa-solid fa-lock"></i></label>
+                            <input type="password" placeholder="Password" name="login-password" id="login-password" required>
+                        </div>
+                    </div>
+                    <div id="error-container">
+                        <div id="login-error-msg" class="login-error-msg">
+                        </div>
+                    </div>
+                    <div id="success-container">
+                        <div id="login-success-msg" class="login-success-msg">
+                        </div>
+                    </div>
+                    <div class="login-loader" id="login-loader">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                    </div>
+                    <div class="login-actions">
+                        <button type="submit" id="loginBtn" class="loginBtn"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>
+                        <button type="button" onclick="closeLoginModal()" class="cancelBtn"><i class="fa-solid fa-xmark"></i> Cancel</button>
+                    </div>
+                    <div class="remember-me">
+                        <label>
+                            <input type="checkbox" class="checkbox-r" checked="checked" name="remember">Remember me
+                        </label>
+                    </div>
+                    <div class="signup-login-container">
+                        <p>Don't have an account?</p>
+                        <button type="button" class="signupBtn" onclick="openSignIn()"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>    
+    </body>
+</html>

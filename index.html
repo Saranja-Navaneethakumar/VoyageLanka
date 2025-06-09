@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Lanka</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous"> -->
+    <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="travel.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="nav-bar-container">
+        <div id="header-placeholder"></div>
+    </div>
+    <marquee width="100%" direction="left" height="25px" ; style="background: red; margin-top: 80px; color: white;">
+        Book before January 15th and "Get 50% off". Enjoy your holiday in Sri Lnaka with us.
+    </marquee>
+
+    <div class="hero-carousel">
+        <div class="carousel-slide active">
+            <img src="images/sl-beach.jpg" alt="Beautiful Sri Lankan Beach">
+            <div class="carousel-caption">
+                <h1>Discover Serene Beaches</h1>
+                <p>Experience the best coastal getaways in Sri Lanka.</p>
+                <!-- <a href="destination.html" class="carousel-btn">Explore More</a> -->
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="images/sigiriya-3.jpg" alt="Scenic Hills of Sri Lanka">
+            <div class="carousel-caption">
+                <h1>Adventure in the Hills</h1>
+                <p>Embark on unforgettable mountain journeys.</p>
+                <!-- <a href="tour.html" class="carousel-btn">Plan Your Trip</a> -->
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="images/perahara-banner-img.jpg" alt="Sri Lankan Culture">
+            <div class="carousel-caption">
+                <h1>Immerse in Rich Culture</h1>
+                <p>Discover the history and traditions of Sri Lanka.</p>
+                <!-- <a href="destination.html" class="carousel-btn">Visit</a> -->
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev"><i class="fa-solid fa-arrow-left-long"></i></span>
+            <span class="next"><i class="fa-solid fa-arrow-right-long"></i></span>
+        </div>
+    </div>
+
+    <section class="our-country">
+        <div class="country-title">
+            Discover the Beauty of Sri Lanka
+        </div>
+        <div class="country-container">
+            <div style="flex: 0 0 40%; min-width: 300px; padding: 10px; display:flex; align-items: center; justify-content: center;">
+                <img src="images/Sri lanka.jpg" alt="Sri Lanka" style="height: 75vh; max-width: 100%; border-radius: 15px; box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);">
+            </div>
+            <div style="flex: 1; min-width: 300px; padding: 10px; text-align: justify;">
+                <p style="font-size: 1.2rem; line-height: 2; color: #444;">
+                    Welcome to Sri Lanka, the "Pearl of the Indian Ocean," a tropical paradise that captivates with its timeless beauty and cultural richness. From its pristine beaches kissed by turquoise waves to its ancient cities steeped in history, Sri Lanka offers a unique blend of adventure, serenity, and tradition.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 2; color: #444; margin-top: 10px;">
+                    Whether you're exploring the rolling hills of Nuwara Eliya, marveling at the UNESCO World Heritage Site of Sigiriya, or experiencing the vibrant festivals and delicious cuisine, Sri Lanka provides a feast for the senses. Its welcoming people and diverse landscapes make it a destination like no other.
+                </p>
+                <p style="font-size: 1.2rem; line-height: 2; color: #444; margin-top: 10px;">
+                    Embark on a journey to discover breathtaking wildlife in Yala National Park, surf the waves at Arugam Bay, or unwind on the golden shores of Mirissa. Let Sri Lanka enchant you with its charm, beauty, and unforgettable experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="sl-tours" style="align-items: center;">
+        <p style="text-align: center; font-size: 30px; color: #007373; font-variant: small-caps; padding-top: 20px;" >Find your Dream Journey</p>
+
+        <div class="tour-carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/beach-hikkaduwa.jpg" alt="Discover Sri Lankan Beaches">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Discover Sri Lankan Beaches</h3>
+                        <p>Explore the beautiful Beaches of Sri Lanka with this 7-day tour package</p>
+                        <!-- <a href="" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/Anuradhapura.jpeg" alt="Cultural & Heritage Tour">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Cultural & Heritage Tour</h3>
+                        <p>Rewind the history of Sri Lanka and explore the rich cultural heritage.</p>
+                        <!-- <a href="" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/yala.jpg" alt="Wildlife & Scenic Adventure">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Wildlife & Scenic Adventure</h3>
+                        <p>Take a trip through beautiful wildlife of Sri Lanka,</p>
+                        <!-- <a href="" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/Nuwara-Eliya-Sri-Lanka.jpg" alt="Adventure in the hill country">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Adventure in the hill country</h3>
+                        <p>Embark the thrilling adventure explore the tea plantations, beautiful waterfalls, and
+                            mountains etc.</p>
+                        <!-- <a href="Galle.jpeg" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/beach-hikkaduwa.jpg" alt="Discover Sri Lankan Beaches">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Discover Sri Lankan Beaches</h3>
+                        <p>Explore the beautiful Beaches of Sri Lanka with this 7-day tour package</p>
+                        <!-- <a href="" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/Anuradhapura.jpeg" alt="Cultural & Heritage Tour">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Cultural & Heritage Tour</h3>
+                        <p>Rewind the history of Sri Lanka and explore the rich cultural heritage.</p>
+                        <!-- <a href="" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/yala.jpg" alt="Wildlife & Scenic Adventure">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Wildlife & Scenic Adventure</h3>
+                        <p>Take a trip through beautiful wildlife of Sri Lanka,</p>
+                        <!-- <a href="" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/Nuwara-Eliya-Sri-Lanka.jpg" alt="Adventure in the hill country">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Adventure in the hill country</h3>
+                        <p>Embark the thrilling adventure explore the tea plantations, beautiful waterfalls, and
+                            mountains etc.</p>
+                        <!-- <a href="Galle.jpeg" class="sl-tour-btn">Explore More</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="sl-tours-btn">
+                <a href="tour.html" class="sl-tour-btn" >Explore More</a>
+            </div>
+            <button class="tour-carousel-control prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+            <button class="tour-carousel-control next"><i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+        <style>
+            .tour-carousel {
+                position: relative;
+                max-width: 100%;
+                margin: 40px auto;
+                overflow: hidden;
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Wrapper for sliding effect */
+            .carousel-wrapper {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                padding: 20px;
+                gap: 10px;
+                background: transparent;
+            }
+
+            /* Individual carousel item */
+            .carousel-item {
+                flex: 0 0 33.33%;
+                /* Display 3 items at a time on large screens */
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+                box-sizing: border-box;
+                overflow: hidden;
+                /* border: 1px solid black; */
+            }
+
+            /* Image styling */
+
+            .carousel-image {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                /* Automatically adjusts height based on width */
+                overflow: hidden;
+                border-radius: 8px;
+            }
+
+            .carousel-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* Still fills the space, but now respects the aspect ratio */
+                object-position: center;
+                border-radius: 8px;
+            }
+
+
+            /* Content styling */
+            .carousel-content {
+                margin-top: 15px;
+                padding: 10px;
+            }
+
+            .carousel-content h3 {
+                font-size: 1.2rem;
+                color: #333;
+                margin: 0 0 10px;
+                font-weight: 600;
+            }
+
+            .carousel-content p {
+                font-size: 0.9rem;
+                color: #666;
+                margin: 0 0 15px;
+            }
+
+            .sl-tour-btn {
+                display: inline-block;
+                background: linear-gradient(90deg, #007373, #62afaf);
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-variant: small-caps;
+                
+            }
+
+            .sl-tour-btn:hover {
+                background: linear-gradient(90deg, #62afaf, #007373);
+                transform: translateY(-3px);
+            }
+
+            .sl-tours-btn {
+                /* background-color: #e0e0e0; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 50px;
+            }
+
+            /* Carousel controls */
+            .tour-carousel-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                border: none;
+                font-size: 24px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .tour-carousel-control.prev {
+                left: 10px;
+            }
+
+            .tour-carousel-control.next {
+                right: 10px;
+            }
+
+            .tour-carousel-control:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 1000px) {
+                .carousel-item {
+                    flex: 0 0 50%;
+                    /* Display 2 items at a time on medium screens */
+                }
+            }
+
+            @media (max-width: 768px) {
+                .carousel-item {
+                    flex: 0 0 100%;
+                    /* Display 1 item at a time on small screens */
+                }
+
+                .carousel-content h3 {
+                    font-size: 1rem;
+                }
+
+                .carousel-content p {
+                    font-size: 0.8rem;
+                }
+
+                .sl-tour-btn {
+                    font-size: 0.8rem;
+                    padding: 6px 12px;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const carouselWrapper = document.querySelector(".carousel-wrapper");
+                const items = document.querySelectorAll(".carousel-item");
+                const prevBtn = document.querySelector(".tour-carousel-control.prev");
+                const nextBtn = document.querySelector(".tour-carousel-control.next");
+
+                const totalItems = items.length;
+                const visibleItems = 3; // Default for large screens
+                const itemsPerSlide = Math.min(visibleItems, totalItems); // Adjust dynamically
+                let currentIndex = 0;
+
+                function updateCarousel() {
+                    const offset = -(currentIndex * (100 / itemsPerSlide));
+                    carouselWrapper.style.transform = `translateX(${offset}%)`;
+                }
+
+                nextBtn.addEventListener("click", () => {
+                    if (currentIndex < totalItems - itemsPerSlide) {
+                        currentIndex++;
+                    } else {
+                        currentIndex = 0;
+                    }
+                    updateCarousel();
+                });
+
+                prevBtn.addEventListener("click", () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                    } else {
+                        currentIndex = totalItems - itemsPerSlide;
+                    }
+                    updateCarousel();
+                });
+
+                // Auto-play carousel
+                setInterval(() => {
+                    if (currentIndex < totalItems - itemsPerSlide) {
+                        currentIndex++;
+                    } else {
+                        currentIndex = 0;
+                    }
+                    updateCarousel();
+                }, 2000);
+            });
+
+        </script>
+
+
+
+
+    </div>
+
+    <section class="places">
+        <div class="place-title" style="color: #007373;">
+            <span data-aos="fade-up">Popular destinations in Sri Lanka</span>
+        </div>
+
+        <div class="places-container">
+            <div class="place-card" data-aos="fade-up">
+                <img class="place-img" src="images\Jaffna.jpeg">
+                <div class="place-body">
+                    <h3 class="place-name"><i class="fa-solid fa-map-location-dot"></i> Jaffna</h3>
+                </div>
+            </div>
+            <div class="place-card" data-aos="fade-up">
+                <img class="place-img" src="images\Colombo.jpeg">
+                <div class="place-body">
+                    <h3 class="place-name"><i class="fa-solid fa-map-location-dot"></i> Colombo</h3>
+                </div>
+            </div>
+            <div class="place-card" data-aos="fade-up">
+                <img class="place-img" src="images\Daladha M1.jpeg">
+                <div class="place-body">
+                    <h3 class="place-name"><i class="fa-solid fa-map-location-dot"></i> Kandy</h3>
+                </div>
+            </div>
+            <div class="place-card" data-aos="fade-up">
+                <img class="place-img" src="images\Nuwara Eliya.jpeg">
+                <div class="place-body">
+                    <h3 class="place-name"><i class="fa-solid fa-map-location-dot"></i> Nuwara Eliya</h3>
+                </div>
+            </div>
+            <div class="place-card" data-aos="fade-up">
+                <img class="place-img" src="images\Polonnaruwa Vatadage - SriLanka.jpeg">
+                <div class="place-body">
+                    <h3 class="place-name"><i class="fa-solid fa-map-location-dot"></i> Polonnaruwa</h3>
+                </div>
+            </div>
+            <div class="place-card" data-aos="fade-up">
+                <img class="place-img" src="images\Arugam Bay Beach Srilanka.jpeg">
+                <div class="place-body">
+                    <h3 class="place-name"><i class="fa-solid fa-map-location-dot"></i> Arugam Bay</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="more-destination" style="color: #007373;">
+            <a href="destination.html" class="more-dest" style="text-decoration: none;"><i class="fa-solid fa-location-dot"></i> More Destionations</a>
+        </div>
+    </section>
+
+
+    <section class="travel-withus">
+        <div class="travel-withus-title">
+            <span style="color: #007373;">Why travel with Voyage Lanka?</span>
+        </div>
+        <div class="travel-withus-container">
+            <div class="travel-item">
+                <div class="travel-icon"><img src="images\icons\customer.png"></div>
+                <div class="travel-text">Dream Journey</div>
+            </div>
+            <div class="travel-item">
+                <div class="travel-icon"><img src="images\icons\manual.png"></div>
+                <div class="travel-text">Best Guide</div>
+            </div>
+            <div class="travel-item">
+                <div class="travel-icon"><img src="images\icons\sales-team.png"></div>
+                <div class="travel-text">Best Team</div>
+            </div>
+            <div class="travel-item">
+                <div class="travel-icon"><img src="images\icons\service.png"></div>
+                <div class="travel-text">Excellent Service</div>
+            </div>
+            <div class="travel-item">
+                <div class="travel-icon"><img src="images\icons\affordable.png"></div>
+                <div class="travel-text">Affordable price</div>
+            </div>
+            <div class="travel-item">
+                <div class="travel-icon"><img src="images\icons\family.png"></div>
+                <div class="travel-text">Safe journey</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="time-to-visit">
+        <div class="time-to-visit-title" style="color: #007373;">Best time to visit to Sri Lanka</div>
+        <div class="time-to-visit-container">
+            <canvas id="climateChart"></canvas>
+        </div>
+        <div class="find-more-cont">
+            <button type="button" class="find-more" onclick="loadTimeToVisit()"><i class="fa-solid fa-arrow-right"></i>
+                Find More</button>
+        </div>
+    </section>
+
+    
+    <section class="info">
+        <div class="info-title" style="color: #007373;">Travel Information to Sri Lanka</div>
+        <div class="info-container-slider">
+            <div class="info-card">
+                <h3>Languages in Sri Lanka</h3>
+                <img src="images/sl-languages.jpg" alt="Srilankan languages">
+                <p>The official languages are spoken by Sri Lankan people are Tamil & Sinhala. English is widely used
+                    language.
+                    You can find all three languages or two in the sign and name bords.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Currency in Sri Lanka</h3>
+                <img src="images/currency-sl.jpg" alt="Srilankan currency">
+                <p>The currency of Sri Lanka is the Sri Lankan Rupee (LKR). ATMs are commonly in all over the country
+                    but cash are more useful especially in rural areas.
+                    Credit card also accepted. To exchange the foreign currency approach bank nera you is the best
+                    option or find the official money exchangers to avoid the scammers.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Ethinic Groups in Sri Lanka</h3>
+                <img src="images/ethnic-sl.jpg" alt="Srilankan languages">
+                <p>Sri Lanka is diverse of ethnic groups including Sinhalese, Tamils, Muslims and others. This culture
+                    impacts the country's festival, cuisine, and traditions.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Food & Cuisine of Sri Lanka</h3>
+                <img src="images/sl-ffod.jpg" alt="Srilankan languages">
+                <p>Sri Lankan cuisine has a wide range of food which includes mix of rice, curry, seafood, meat,
+                    vegetables and tropical fruits etc. Hoppers (bowl shape pancakes), Pittu (Made with rice flour and
+                    shredded coconut), Koththu (Made with chopped rotti with curry, meat, veggies etc), Sambol (greated
+                    coconut) those are the special items you must try in Sri Lanka.
+                    You can find plenty of ranges for non-veg and veg-food in all part of Sri Lanka.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Health & Vacinations</h3>
+                <img src="images/sl-vaccine.jpg" alt="Srilankan languages">
+                <p>Make sure you got up-to-date vaccinations. Maleria is not prevalent but dengue fever is especially in
+                    rainy seasons. Find ou more about vaccination on
+                    <a href="https://travelhealthpro.org.uk/country/204/sri-lanka" target="_blank">Travel HealthPro
+                        Website.</a>
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Time Zone</h3>
+                <img src="images/sl-timezone.jpg" alt="Srilankan languages">
+                <p>Sri Lanka time zone is IST (India Standard Time) which is UTC+5:30 hours. It takes eleven and half
+                    hours to travel from UK to Sri Lanka by flight.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Travel Advice</h3>
+                <img src="images/sl-travel-info.jpg" alt="Srilankan languages">
+                <p>Find out more information on <a href="https://www.gov.uk/foreign-travel-advice/sri-lanka"
+                        target="_blank">Foreign Travel Advice</a> & <a href="https://www.srilankaimmigration.org/"
+                        target="_blank">Sri Lankan Immigration</a>
+                </p>
+            </div>
+        </div>
+        <div class="nav-buttons-info">
+            <button id="prev-btn" onclick="prevSlide()"><i class="fa-solid fa-arrow-left-long"></i></button>
+            <button id="next-btn" onclick="nextSlide()"><i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+    </section>
+
+
+    <div id="login-modal-container"></div>
+    <div class="footer-container">
+        <div id="footer-placeholder"></div>
+    </div>
+    <script src="chart.js"></script>
+    <script src="sl-info-slider.js"></script>
+
+    <style>
+        /* Hero Carousel */
+        .hero-carousel {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            /* margin-top: 80px; */
+        }
+
+        .carousel-slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width:750px){
+            .carousel-caption {
+                bottom: 65%;
+            }
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+            .carousel-controls {
+                top: 20% !important;
+            }
+        }
+        .carousel-btn {
+            background-color: #007373;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background-color: #005959;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls span {
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            background: rgba(192, 192, 0, 0.8);
+            border-radius: 10%;
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-controls .prev {
+            margin-left: 10px;
+        }
+
+        .carousel-controls .next {
+            margin-right: 10px;
+        }
+
+        .carousel-controls span:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".carousel-slide");
+            const prev = document.querySelector(".prev");
+            const next = document.querySelector(".next");
+            let currentIndex = 0;
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove("active");
+                    if (i === index) slide.classList.add("active");
+                });
+            };
+
+            const showNextSlide = () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            };
+
+            const showPrevSlide = () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            };
+
+            next.addEventListener("click", showNextSlide);
+            prev.addEventListener("click", showPrevSlide);
+
+            // Auto-slide every 10 seconds
+            setInterval(showNextSlide, 10000);
+        });
+    </script>
+</body>
+
+</html>

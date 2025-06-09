@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Voyage Lanka</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="travel.js"></script>
+    <script type="module" src="contactus.js" defer></script>
+</head>
+
+<body style="background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(146,226,150,1) 100%);">
+    <div class="nav-bar-container">
+        <div id="header-placeholder"></div>
+    </div>
+    <div class="contact-header">
+        <h1 style="color: #4bb6b0;">Connect with us</h1>
+        <!-- <img src="images/contactus.webp"> -->
+        <p>We'd love to hear your voices about your journey and other queries! Thank you for keep in touch with us.
+            Please fill out the form below, and we'll get back to you as soon as possible.</p>
+    </div>
+    <main>
+        <div class="contact">
+            <section class="contact-form">
+                <form id="cont-Form">
+                    <div class="contForm-grp">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="contForm-grp">
+                        <label for="name"><i class="fa-solid fa-user"></i></label>
+                        <input type="text" id="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="contForm-grp">
+                        <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <div class="error-msg" id="contct-email-error"></div>
+                    </div>
+                    <div class="contForm-grp">
+                        <label for="country"><i class="fa-solid fa-globe"></i></label>
+                        <input type="text" id="country" placeholder="Country" required>
+                    </div>
+                    <div class="contForm-grp">
+                        <label for="contact"><i class="fa-solid fa-phone"></i></label>
+                        <input type="text" id="contact" placeholder="Contact Number" required>
+                        <div class="error-msg" id="contact-phone-error"></div>
+                    </div>
+                    <div class="contForm-grp">
+                        <label for="message"><i class="fa-solid fa-message"></i></label>
+                        <textarea type="text" id="message" placeholder="Message"></textarea>
+                    </div>
+                    <div id="success-container">
+                        <div id="contact-success-msg" class="contact-success-msg">
+                        </div>
+                    </div>
+                    <div id="error-container">
+                        <div id="contact-error-msg" class="contact-error-msg">
+                        </div>
+                    </div>
+                    <div class="contForm-actions">
+                        <button type="submit" class="contactusBtn"><i class="fa-solid fa-paper-plane"></i> Send
+                            Message</button>
+                    </div>
+                </form>
+
+            </section>
+            <div class="contact-details">
+                <ul>
+                    <li><i class="fa-solid fa-house"></i>Voyage Lanka, Jaffna, Sri Lanka</li>
+                    <li><i class="fa-solid fa-phone"></i>+94 (0)785543254</li>
+                    <li><a href="mailto:info@voyagelanka.org.lk" style="text-decoration: none; color: black;"><i
+                                class="fa-solid fa-envelope"></i> info@voyagelanka.org.lk</a></li>
+                    <img src="images/Contact-Us-Cartoon.webp" style="height: auto; width: 50%;">
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <div id="login-modal-container"></div>
+    <div class="footer-container">
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <style>
+        .contact-header {
+            width: 100vw;
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/contactus-1.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: black;
+            margin-top: 80px;
+            min-height: 60vh;
+        }
+
+
+        .contact-header h1 {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .contact-header p {
+            font-size: 20px;
+            margin: 0;
+            color: white;
+        }
+
+        .contact-header img {
+            width: 40%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .contact {
+            display: flex;
+            padding: 50px;
+        }
+
+        @media(max-width:800px){
+            .contact {
+                
+            flex-direction: column;
+            }
+        }
+        .contact-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex-direction: column;
+            /* background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(146,226,150,1) 100%); */
+            flex: 1;
+        }
+
+        .contact-form form {
+            display: block;
+            background-color: transparent;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            width: 500px;
+            /* flex: 0 1 50%; */
+        }
+
+        .contact-details {
+            flex: 0 1 50%;
+            padding: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-details ul li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid black;
+            padding: 20px 25px;
+            width: 75%;
+            list-style: none;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .contact-details ul li .fa-solid {
+            margin-right: 7px;
+        }
+
+        /* .contact-form img {
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+                flex: 0 1 45%;
+            } */
+        .contForm-grp {
+            width: 100%;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contForm-grp label {
+            flex: 0 0 7%;
+            font-weight: bold;
+            color: #133a3a;
+        }
+
+        .contForm-grp input,
+        .contForm-grp textarea {
+            flex: 1;
+            width: 100%;
+            border: 1px solid #555555;
+            border-radius: 5px;
+            font-size: 15px;
+            box-sizing: border-box;
+            padding: 15px;
+            background-color: transparent;
+        }
+
+        .contForm-grp input:focus,
+        .contForm-grp textarea:focus {
+            border-color: #105c58;
+            outline: none;
+        }
+
+        .contForm-actions {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contactusBtn {
+            display: inline-block;
+            background-color: #105c58;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: backgroud-color 0.3s;
+            box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .contactusBtn:hover {
+            background-color: #002727;
+            box-shadow: none;
+        }
+
+        @media(max-width:700px) {
+            .cont-Form {
+                padding: 20px;
+            }
+        }
+
+        @media(max-width:900px) {
+            .contact-form form {
+                max-width: 90%;
+
+            }
+        }
+    </style>
+</body>
+
+</html>

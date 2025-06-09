@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destinations - Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="travel.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar-container">
+            <div id="header-placeholder"></div>
+        </div>
+
+        <div class="destination-detail-container">
+            <div class="destination-detail">
+
+                <h2 id="destination-name"></h2>
+
+                <div class="destination-img">
+                    <img class="destination-image" id="destination-image" src="" alt="">
+                </div>
+            
+                <p class="destination-description" id="destination-description"></p>
+
+                <div class="places-to-visit-container">
+                    <h3><i class="fa-solid fa-map-location-dot"></i> Places to Visit</h3>
+                    <div id="places-to-visit"></div>
+                </div>
+
+                <div class="things-to-do-container">
+                    <h3><i class="fa-solid fa-suitcase-rolling"></i> Things to Do</h3>
+                    <ul id="things-to-do"></ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="login-modal-container"></div>
+        <div class="footer-container">
+            <div id="footer-placeholder"></div>
+        </div>
+        <script type="text/javascript" src="destination.js"></script>
+        <script>
+            $(document).ready(function () {
+                const  destinations = [
+                {
+                    id: 1,
+                    name: "Nuwara Eliya",
+                    description:"A revered destination for pilgrims, renowned for its breathtaking vistas and spiritual importance.",
+                    image: {src:"images/tour/Nuwaraeliya.jpg", name:"Nuwara Eliya"},
+                    placesToVisit: [
+                        {name: "Adam's Peak", image:"images/tour/adam's peak.jpg", description: "View from the top of the Adam's Peak, Visit the Adam's Peak Temple & Worship the sacred footprint."},
+                        {name: "Hakgala Gardens", image:"images/tour/haggala.png", description: "A large garden well-known for its assortment of ferns, orchids, and roses."},
+                        {name: "Horton Plains", image:"images/tour/horton plains.jpg", description: "A UNESCO World Heritage Site famous for its waterfalls, fuzzy grasslands, and World's End viewpoint."},
+                        {name: "Sita Eliya", image:"images/tour/sita-eliya.avif", description: "A Hindu temple surrounded by colorful plants and connected to the Ramayana myth."}
+                    ],
+
+                    thingsToDo: ["Tea Plantation Tour", "Horse Riding", "Tour Ambewala Farms" ]
+                },
+                {
+                    id: 2,
+                    name: "Colombo",
+                    description:"A busting capital of Sri Lanka, is a mix of modern urban life & rich colonial history. You can enjoy the upscale malls and also colonial forts in one place.",
+                    image: {src:"images/tour/colombo.jpeg", name:"Colombo"},
+                    placesToVisit: [
+                        {name: "Galle Face", image:"images/tour/galle face.jpg", description: "A charming waterfront walkway that's perfect for wandering in the evening, eating street cuisine, and taking in the sunset."},
+                        {name: "Ganagaramaya Temple", image:"images/tour/ganagaramaya.webp", description: "A well-known Buddhist temple with elaborate sculptures and artifacts that blend spiritual, architectural, and cultural significance."},
+                        {name: "Lotus Tower", image:"images/tour/lotustower.jpg", description: "The tallest tower in South Asia and a modern architectural wonder, it provides expansive metropolitan vistas."},
+                        {name: "Independence Memorial Hall", image:"images/tour/independencehall.jpg", description: "Surrounded by lovely gardens and colonial buildings, this historic monument honors Sri Lanka's freedom."}
+                    ],
+
+                    thingsToDo: ["Explore street food in Galle Face", "Shopping in Pettah Market", "Visit Viharamadhevi Park", "Nightlife in Colombo" ]
+                },
+                {
+                    id:3,
+                    name: "Hatton",
+                    description:"Nestled in the heart of Sri Lanka’s tea country, Hatton is a serene destination surrounded by rolling hills, lush tea plantations, and colonial estates. Perfect for nature lovers and adventurers.",
+                    image: {src:"images/tour/hatton.jpg", name:"Hatton"},
+                    placesToVisit: [
+                        {name: "Adam's Peak", image:"images/tour/adams peak.jpg", description: "View from the top of the Adam's Peak, Visit the Adam's Peak Temple & Worship the sacred footprint."},
+                        {name: "Castlereagh Reservoir", image:"images/tour/Castlereagh Reservoir.jpg", description: "A peaceful lake surrounded by tea plantations, perfect for scenic boat rides and picnics. The reservoir offers peace and nature away from city life."},
+                        {name: "Tea Estates and Factories", image:"images/tour/Tea Factory Hotel Nuwara Eliya Sri Lanka.jpg", description: "Visit historic estates like Norwood or Dunkeld to experience tea-picking and enjoy a cup of freshly brewed Ceylon tea. Guided tours reveal the legacy of Sri Lanka’s tea industry."},
+                        {name: "St. Clair’s Falls & Devon Falls", image:"images/tour/St_Clair's and Devon Falls_ Nuwara Eliya - Sri Lanka.jpg", description: "These cascading twin waterfalls are iconic viewpoints offering dramatic scenery amid lush greenery, ideal for photography and relaxation."}
+                    ],
+
+                    thingsToDo: ["Hike Adam’s Peak for a magical sunrise.", "Explore tea estates and enjoy a tea-tasting tour.", "Take scenic drives through Hatton’s winding roads.",  "Relax by Castlereagh Lake."]
+                },
+                {
+                    id: 4,
+                    name: "Galle",
+                    description:"Galle is a charming coastal city with a blend of colonial architecture, vibrant streets, and seaside beauty. It’s a UNESCO World Heritage Site rich in history and culture.",
+                    image: {src:"images/tour/galle.jpg", name:"Galle"},
+                    placesToVisit: [
+                        {name: "Galle Fort", image:"images/tour/Galle Fort.jpg", description: "A UNESCO World Heritage Site built by the Portuguese and fortified by the Dutch, offering a beautiful blend of colonial architecture, boutiques, and cafes. Stroll along its ancient ramparts at sunset for breathtaking ocean views"},
+                        {name: "Jungle Beach", image:"images/tour/jungle beech.jpg", description: "A secluded paradise nestled between Galle and Unawatuna. The calm, clear waters make it perfect for snorkeling and relaxing in nature."},
+                        {name: "Unawatuna Beach", image:"images/tour/unawatuna beach.jpg", description: "A lively crescent-shaped beach ideal for water sports, beachfront dining, and vibrant nightlife. The soft golden sands are great for sunbathing and swimming."},
+                        {name: "Dutch Reformed Church", image:"images/tour/Dutch Reformed Church.jpg", description: "A historic 17th-century church showcasing Dutch colonial architecture. The antique tombstones and wooden interior tell a story of Galle’s past."}
+                    ],
+
+                    thingsToDo: [ "Walk along the Galle Fort ramparts during sunset.","Discover hidden cafes and boutique shops inside the fort.", "Relax at Unawatuna Beach and try snorkeling.", "Visit the Maritime Archaeology Museum."]
+                },
+                {
+                    id: 5,
+                    name: "Jaffna",
+                    description:"Jaffna, located in the northernmost part of Sri Lanka, is a cultural gem with Tamil heritage, historic temples, and stunning coastal spots.",
+                    image: {src:"images/tour/jaffna.jpg", name:"Jaffna"},
+                    placesToVisit: [
+                        {name: "Nallur Kandaswamy Temple", image:"images/tour/Nallur.jpg", description: "An iconic Hindu temple with vibrant architecture and intricate carvings. It’s a spiritual hub that showcases Tamil culture and tradition."},
+                        {name: "Jaffna Fort", image:"images/tour/Jaffna Fort.jpg", description: "Built by the Portuguese and expanded by the Dutch, the fort is a historic landmark with stunning views of the Jaffna Peninsula. It’s a great place for history enthusiasts."},
+                        {name: "Casuarina Beach", image:"images/tour/Casuarina Beach.jpg", description: "Known for its soft white sands and shallow waters, this beach is perfect for a peaceful getaway and safe swimming. It’s a favourite among locals and travellers."},
+                        {name: "Nagadeepa Island", image:"images/tour/Nagadeepa.jpg", description: "Accessible by boat, this sacred island houses both a Buddhist temple and a Hindu shrine. It’s a serene and culturally significant destination."}
+                    ],
+
+                    thingsToDo: ["Explore Jaffna’s local markets and taste Jaffna crab curry.","Visit Nallur Temple during prayer hours.","Take a ferry ride to Nagadeepa Island.", "Relax at Casuarina Beach." ]
+                },
+                {
+                    id: 6,
+                    name: "Kandy",
+                    description:"The cultural capital of Sri Lanka, Kandy, is a picturesque city surrounded by hills and lakes. It’s home to temples, cultural shows, and colonial charm.",
+                    image: {src:"images/tour/Kandy.jpg", name:"Nuwara Eliya"},
+                    placesToVisit: [
+                        {name: "Temple of the Sacred Tooth Relic", image:"images/tour/Dalada maligawa.jpg", description: " One of Buddhism’s holiest shrines, housing the sacred tooth relic of Lord Buddha. The temple’s stunning architecture and cultural significance make it a must-visit."},
+                        {name: "Kandy Lake", image:"images/tour/Kandy Lake.jpg", description: " A serene man-made lake in the heart of the city, surrounded by beautiful trees and pathways. Enjoy a peaceful stroll or a boat ride while admiring the scenic views."},
+                        {name: "Peradeniya Royal Botanical Gardens", image:"images/tour/Peradeniya.jpg", description: "Explore this 147-acre garden with thousands of plant species, including towering palm avenues and orchid houses. It’s perfect for nature lovers and photographers."},
+                        {name: "Bahirawakanda Temple", image:"images/tour/Bahirawakanda Temple.jpg", description: "Home to a giant Buddha statue, this temple offers panoramic views of Kandy from its hilltop location. The climb is well worth the stunning scenery."}
+                    ],
+
+                    thingsToDo: ["Watch a traditional Kandyan cultural dance.", "Visit the Temple of the Sacred Tooth Relic.","Stroll around Kandy Lake at sunset.","Explore the Peradeniya Botanical Gardens."]
+                },
+                {
+                    id: 7,
+                    name: "Sigiriya",
+                    description:"Sigiriya is one of Sri Lanka’s most iconic landmarks, featuring the majestic Sigiriya Rock Fortress, ancient gardens, and breathtaking views.",
+                    image: {src:"images/tour/Sigiriya.jpg", name:"Nuwara Eliya"},
+                    placesToVisit: [
+                        {name: "Sigiriya Rock Fortress", image:"images/tour/Siriya Rock.jpg", description: "Known as the “Lion Rock,” this ancient royal palace sits atop a massive rock with frescoes, gardens, and breathtaking views. It’s a UNESCO World Heritage Site and an engineering marvel."},
+                        {name: "Pidurangala Rock", image:"images/tour/Pidurangala-Rock.jpg", description: "Offering panoramic views of Sigiriya Rock, this less-crowded climb is a perfect spot for sunrise or sunset. The rock also features a reclining Buddha statue and ancient ruins."},
+                        {name: "Sigiriya Museums", image:"images/tour/Sigiriya Museum.jpg", description: "Learn about the history and significance of Sigiriya Rock through exhibits featuring artefacts, photographs, and models. It’s an enriching prelude to your climb."},
+                        {name: "Frescoes & Water Gardensa", image:"images/tour/Frescoes & Water Gardens.jpg", description: "Admire the ancient paintings of celestial maidens on the rock walls and explore the intricate water gardens that reflect advanced hydraulic systems."}
+                    ],
+
+                    thingsToDo: ["Climb Sigiriya Rock Fortress and enjoy stunning views.","Hike Pidurangala Rock for sunrise or sunset.","Explore the ancient water gardens.","Visit Sigiriya Museum for historical insights."]
+                },
+                {
+                    id: 8,
+                    name: "Anuradhapura",
+                    description:"Anuradhapura is an ancient city rich in history and spirituality, with centuries-old ruins, temples, and reservoirs.",
+                    image: {src:"images/tour/Anuradhapura 1.jpg", name:"Nuwara Eliya"},
+                    placesToVisit: [
+                        {name: "Sri Maha Bodhi Tree", image:"images/tour/Jaya Sri Maha Bodhiya.jpg", description: "Planted from a sapling of the tree under which Lord Buddha attained enlightenment, it’s the world’s oldest historically documented tree. The sacred site attracts thousands of pilgrims."},
+                        {name: "Ruwanwelisaya Stupa", image:"images/tour/Ruwanweli Maha Seya.jpg", description: "This magnificent white stupa stands as a testament to ancient Sinhalese architecture and devotion. It’s a must-visit for its grandeur and spiritual atmosphere."},
+                        {name: "Jetavanaramaya", image:"images/tour/Jethavanaramaya stupa.jpg", description: "Once the tallest stupa in the ancient world, this massive structure highlights the brilliance of Sri Lanka’s ancient builders. It’s surrounded by serene ruins and monastic complexes."},
+                        {name: "Kuttam Pokuna", image:"images/tour/Kuttam Pokuna.jpg", description: "Known as the Twin Ponds, these beautifully designed ancient bathing pools showcase the advanced engineering skills of the Anuradhapura era."}
+                    ],
+
+                    thingsToDo: [" Explore the ancient temples and stupas.","Visit the sacred Sri Maha Bodhi Tree.","Take a guided tour to learn about Anuradhapura’s history.","Enjoy cycling through ancient ruins."]
+                },
+                {
+                    id: 9,
+                    name: "Dhambulla",
+                    description:"Dambulla is home to Sri Lanka’s largest and best-preserved cave temple complex, surrounded by stunning landscapes.",
+                    image: {src:"images/tour/Dambulla.jpg", name:"Dambulla"},
+                    placesToVisit: [
+                        {name: "Dambulla Cave Temple", image:"images/tour/The Dambulla Cave Temple.jpg", description: "This UNESCO-listed cave temple features over 150 Buddha statues and colorful murals that date back centuries. The views from the temple’s hilltop are equally stunning."},
+                        {name: "Golden Temple", image:"images/tour/Dambulla golden temple.jpg", description: "At the base of the cave temple lies the giant golden Buddha statue, symbolizing Dambulla’s spiritual significance. The vibrant design is both modern and awe-inspiring."},
+                        {name: "Ironwood Forest (Namal Uyana)", image:"images/tour/Ironwood Forest.png", description: "A unique nature reserve famous for its ironwood trees and rose quartz mountain. It’s a serene spot perfect for hiking and reflection."},
+                        {name: "Kandalama Reservoir", image:"images/tour/Kandalama Reservoir.jpg", description: "Surrounded by lush greenery, this reservoir is ideal for boat rides and birdwatching. It’s a peaceful retreat near Dambulla."}
+                    ],
+
+                    thingsToDo: ["Visit the Dambulla Cave Temple and admire ancient art.","Explore Namal Uyana for a nature walk.","Take a scenic boat ride on Kandalama Reservoir.","Discover the Golden Temple’s architecture."]
+                },
+                {
+                    id: 10,
+                    name: "Trincomalee",
+                    description:"Trincomalee is a stunning coastal town known for its pristine beaches, crystal-clear waters, and cultural sites.",
+                    image: {src:"images/tour/trincomalee.jpg", name:"Nuwara Eliya"},
+                    placesToVisit: [
+                        {name: "Nilaveli Beach", image:"images/tour/Nilaveli Beach.jpg", description: "Known for its pristine white sands and clear blue waters, Nilaveli is perfect for swimming, sunbathing, and beach sports. The calm waters are ideal for families and couples."},
+                        {name: "Pigeon Island", image:"images/tour/Pigeon Island.jpg", description: "A marine national park featuring coral reefs, colourful fish, and reef sharks, making it one of the best snorkelling and diving spots in Sri Lanka."},
+                        {name: "Koneswaram Temple", image:"images/tour/Koneswaram Temple.jpg", description: "This ancient Hindu temple sits atop a cliff with sweeping ocean views. It’s a place of worship and a scenic spot for photography"},
+                        {name: "Fort Frederic", image:"images/tour/Fort Frederick.jpg", description: "Built by the Portuguese and expanded by the Dutch, this fort offers panoramic views of the Trincomalee coastline. Explore its historical ruins and surrounding wildlife."}
+                    ],
+
+                    thingsToDo: ["Snorkel or dive at Pigeon Island.","Relax on Nilaveli Beach and enjoy fresh seafood.","Visit the Koneswaram Temple for stunning views.","Explore Fort Frederick and nearby attractions."]
+                }
+            ];
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const destinationId = urlParams.get('destinationId');
+
+            if(destinationId){
+                const destination = destinations.find(d=> d.id === parseInt(destinationId));
+                if(destination){
+                    document.getElementById("destination-name").textContent = destination.name;
+                    document.getElementById("destination-image").src = destination.image.src;
+                    document.getElementById("destination-description").textContent = destination.description;
+
+                    destination.placesToVisit.forEach(place=>{
+                        const placeTovisitContainer = document.getElementById('places-to-visit');
+                        const placeElement = document.createElement("div");
+                        placeElement.className = "destination-card";
+                        placeElement.innerHTML = `<img src="${place.image}" alt="${place.name}">
+                        <h5>${place.name}</h5>
+                        <p>${place.description}</p>`;
+                        placeTovisitContainer.appendChild(placeElement);
+                    });
+
+
+                    destination.thingsToDo.forEach(things=> {
+                        document.getElementById('things-to-do').innerHTML += `<li><i class="fa-solid fa-check"></i>${things}</li>`;
+                    })
+                }
+            }
+        });
+
+        </script>
+    </body>
+</html>

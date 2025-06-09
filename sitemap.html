@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Voyage Lanka</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="travel.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar-container">
+        <div id="header-placeholder"></div>
+    </div>
+    <main style="margin-top: 100px;">
+        <section class="sitemap">
+            <h1>Website Sitemap</h1>
+            <p style="margin-top: 10px; font-size: 18px;">Browse through all the pages of our website for a seamless experience.</p>
+
+            <div class="sitemap-container">
+                <h2>Main Pages</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><button id="login-Button" onclick="openLoginModal()" style="width:auto; background: none; border: none; font-size: 18px;">
+                        <i class="fa-solid fa-user"></i>  Login</button></li>
+                    <li><a href="#"><i class="fa-solid fa-sign-out"></i> Sign Out</a></li>
+                    <li><a href="about-us.html"><i class="fa-solid fa-address-card"></i> About Us</a></li>
+                    <li><a href="contact-us.html"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+                </ul>
+                <h2>Destinations</h2>
+                <ul>
+                    <li><a href="destination.html"><i class="fa-solid fa-location-dot"></i> Destinations</a></li>
+                    <li><a href="#"><i class="fa-solid fa-info"></i> Destination Details</a></li><p>(Please select destination to view the tour details)</p>
+                    <li><a href="time-to-visit.html"><i class="fa-solid fa-calendar-alt"></i> Best Time to Visit</a></li>
+
+                </ul>
+                <h2>Tours</h2>
+                <ul>
+                    <li><a href="tour.html"><i class="fa-solid fa-plane-departure"></i> Tours</a></li>
+                    <li><a href="#"><i class="fa-solid fa-info-circle"></i> Tour Details</a></li><p>(Please select tour to view the tour details)</p>
+                    <li><a href="booking.html"><i class="fa-solid fa-ticket"></i></i> Book a Tour</a></li>
+                </ul>
+                <h2>Additional Pages</h2>
+                <ul>
+                    <li><a href="favourites.html"><i class="fa-solid fa-heart"></i> Favorites</a></li>
+                    <li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                    <li><a href="hotels.html"><i class="fa-solid fa-hotel"></i> Hotels</a></li>
+                    <li><a href="feedback.html"><i class="fa-solid fa-pen-nib"></i> Feedback</a></li>
+                    <li><a href="sitemap.html"><i class="fa-solid fa-sitemap"></i> Sitemap</a></li>
+                </ul>
+                
+            </div>
+        </section>
+    </main>
+    <div id="login-modal-container"></div>
+    <div class="footer-container">
+        <div id="footer-placeholder"></div>
+    </div>
+    <style>
+        .sitemap {
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sitemap h1 {
+            color: #007373;
+        }
+
+        .sitemap-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .sitemap-container ul {
+            list-style: none;
+            margin: 10px;
+            padding: 0;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .sitemap-container ul li {
+            margin: 10px 0;
+        }
+
+        .sitemap-container ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .sitemap-container ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .sitemap-container ul li a .fa-solid {
+            margin-right: 5px;
+        }
+    </style>
+</body>
+
+</html>

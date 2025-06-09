@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Agency</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div id="footer">
+            <footer>
+                <h2 style="margin-bottom: 30px;">Thank you for explore with Voyage Lanka</h2>
+                <div class="footer-content">
+                    <div class="footer-nav">
+                        <p style="font-weight: bold; font-size: 20px; margin-bottom: 15px;">Quick Links</p>
+                        <a href="contact-us.html">Conatct Us</a>
+                        <a href="index.html">Home Voyage Lanka</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                    <div class="update">
+                        <p style="margin-bottom: 10px;">Subscribe to our Voyage Lanka to get latest updates and offers.</p>
+                        <form id="subscribe">
+                            <input type="text" placeholder="First name" name="firstname" id="firstname" required>
+                            <input type="text" placeholder="Last name" name="lastname" id="lastname" required>
+                            <input type="email" placeholder="Email" name="email" id="email" required>
+                            <div id="success-container">
+                                <div id="subscribe-success-msg" class="subscribe-success-msg">
+                                </div>
+                            </div>
+                            <div id="error-container">
+                                <div id="subscribe-error-msg" class="subscribe-error-msg">
+                                </div>
+                            </div>
+                            <button type="submit"><i class="fa-solid fa-bell"></i><i class="fa-regular fa-bell fa-shake"></i> Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a class="social" href="https://www.facebook.com/login.php/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="social" href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></i></a>
+                    <a class="social" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+                    <a class="social" href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a class="social" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p>&COPY; 2024 Voyage Lanka | All rights reserved.</p></footer>
+        </div>
+
+        <style>
+            
+            footer {
+                /* height: 300px; */
+                background-color: #002727 ;
+                color: aliceblue;
+                text-align: center;
+                padding: 40px 25%;
+                left: 0;
+                bottom: 0;
+            }
+
+            footer a {
+                color: azure;
+                text-decoration: none;
+                transition: color .3s;
+            }
+
+            footer a:hover {
+                color: white;
+            }
+
+            .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .footer-nav,
+            .update {
+                flex: 1;
+                min-width: 300px;
+                margin-top: 10px;
+                text-align: left;
+            }
+
+            .footer-nav {
+                text-align: left;
+            }
+
+            .footer-nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .footer-nav a:hover {
+                text-decoration: underline;
+            }
+            .update form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .update input[type="text"],
+            .update input[type="email"] {
+                transition: none;
+                pointer-events: auto;
+                width: 80%;
+                padding: 10px;
+                border: 1px solid white;
+                background-color: transparent;
+                color: white;
+                border-radius: 5px;
+            }
+            .update button {
+                display: inline-block;
+                margin: 10px 0;
+                background-color: #348b7b;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 5px;
+                text-decoration: none;
+                width: 30%;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+            }
+
+            .update button .fa-solid {
+                display: none;
+            }
+
+            .update button:hover {
+                box-shadow: none;
+                background-color: #C5AFA4;
+                color: black;
+            }
+
+            .update button:hover .fa-solid {
+                display: inline-block;
+            }
+            .update button:hover .fa-regular {
+                display: none;
+            }
+
+            .social-links {
+                text-align: center;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                padding: 15px;
+            }
+            .social-links .social {
+                margin: 5px 10px;
+                color: aliceblue;
+                font-size: 30px;
+            }
+            .social:hover {
+                border-radius: 5px;
+            }
+
+            .social .fa-facebook-f:hover {
+                color: #1877F2;
+
+            }
+            .social .fa-linkedin-in:hover {
+                color: #0A66C2;
+            }
+            .social .fa-pinterest-p:hover {
+                color: #e60023;
+            }
+            .social .fa-instagram:hover {
+                color: #E1306C;
+            }
+            .social .fa-x-twitter:hover {
+                color: #1da1f2;
+            }
+
+            @media (max-width: 760px) {
+                .footer-content {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .footer-nav, .update {
+                    text-align: center;
+                }
+            }
+
+
+        </style>
+        <script type="module" src="footer-subscribe.js"></script>
+    </body>
+</html>

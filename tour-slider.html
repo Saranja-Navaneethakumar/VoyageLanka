@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tours - Voyage Lanka</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- <script src="https://kit.fontawesome.com/9225fb6e68.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="travel.js"></script>
+    </head>
+    <body>
+        <div class="tour-carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/beach-hikkaduwa.jpg" alt="Discover Sri Lankan Beaches">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Discover Sri Lankan Beaches</h3>
+                        <p>Explore the beautiful Beaches of Sri Lanka with this 7-day tour package</p>
+                        <a href="" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/Anuradhapura.jpeg" alt="Cultural & Heritage Tour">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Cultural & Heritage Tour</h3>
+                        <p>Rewind the history of Sri Lanka and explore the rich cultural heritage.</p>
+                        <a href="" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/yala.jpg" alt="Wildlife & Scenic Adventure">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Wildlife & Scenic Adventure</h3>
+                        <p>Take a trip through beautiful wildlife of Sri Lanka,</p>
+                        <a href="" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/Nuwara-Eliya-Sri-Lanka.jpg" alt="Adventure in the hill country">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Adventure in the hill country</h3>
+                        <p>Embark the thrilling adventure explore the tea plantations, beautiful waterfalls, and mountains etc.</p>
+                        <a href="Galle.jpeg" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/beach-hikkaduwa.jpg" alt="Discover Sri Lankan Beaches">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Discover Sri Lankan Beaches</h3>
+                        <p>Explore the beautiful Beaches of Sri Lanka with this 7-day tour package</p>
+                        <a href="" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/Anuradhapura.jpeg" alt="Cultural & Heritage Tour">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Cultural & Heritage Tour</h3>
+                        <p>Rewind the history of Sri Lanka and explore the rich cultural heritage.</p>
+                        <a href="" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/yala.jpg" alt="Wildlife & Scenic Adventure">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Wildlife & Scenic Adventure</h3>
+                        <p>Take a trip through beautiful wildlife of Sri Lanka,</p>
+                        <a href="" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/tour/Nuwara-Eliya-Sri-Lanka.jpg" alt="Adventure in the hill country">
+                    </div>
+                    <div class="carousel-content">
+                        <h3>Adventure in the hill country</h3>
+                        <p>Embark the thrilling adventure explore the tea plantations, beautiful waterfalls, and mountains etc.</p>
+                        <a href="Galle.jpeg" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+        </div>
+        <style>/* General carousel styles */
+            .tour-carousel {
+                position: relative;
+                max-width: 90%;
+                margin: 40px auto;
+                overflow: hidden;
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Wrapper for sliding effect */
+            .carousel-wrapper {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            
+            /* Individual carousel item */
+            .carousel-item {
+                flex: 0 0 33.33%; /* Display 3 items at a time on large screens */
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            
+            /* Image styling */
+            
+            .carousel-image {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Automatically adjusts height based on width */
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .carousel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Still fills the space, but now respects the aspect ratio */
+            object-position: center;
+            border-radius: 8px;
+        }
+        
+            
+            /* Content styling */
+            .carousel-content {
+                margin-top: 15px;
+                padding: 10px;
+            }
+            
+            .carousel-content h3 {
+                font-size: 1.2rem;
+                color: #333;
+                margin: 0 0 10px;
+                font-weight: 600;
+            }
+            
+            .carousel-content p {
+                font-size: 0.9rem;
+                color: #666;
+                margin: 0 0 15px;
+            }
+            
+            .cta-button {
+                display: inline-block;
+                background: linear-gradient(90deg, #ff6a00, #ffae00);
+                color: white;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: bold;
+                padding: 8px 16px;
+                border-radius: 20px;
+                transition: background 0.3s, transform 0.3s;
+            }
+            
+            .cta-button:hover {
+                background: linear-gradient(90deg, #ffae00, #ff6a00);
+                transform: translateY(-3px);
+            }
+            
+            /* Carousel controls */
+            .carousel-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                border: none;
+                font-size: 24px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .carousel-control.prev {
+                left: 10px;
+            }
+            
+            .carousel-control.next {
+                right: 10px;
+            }
+            
+            .carousel-control:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            
+            /* Responsive adjustments */
+            @media (max-width: 1024px) {
+                .carousel-item {
+                    flex: 0 0 50%; /* Display 2 items at a time on medium screens */
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .carousel-item {
+                    flex: 0 0 100%; /* Display 1 item at a time on small screens */
+                }
+                .carousel-content h3 {
+                    font-size: 1rem;
+                }
+                .carousel-content p {
+                    font-size: 0.8rem;
+                }
+                .cta-button {
+                    font-size: 0.8rem;
+                    padding: 6px 12px;
+                }
+            }
+            </style>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+            const carouselWrapper = document.querySelector(".carousel-wrapper");
+            const items = document.querySelectorAll(".carousel-item");
+            const prevBtn = document.querySelector(".carousel-control.prev");
+            const nextBtn = document.querySelector(".carousel-control.next");
+        
+            const totalItems = items.length;
+            const visibleItems = 3; // Default for large screens
+            const itemsPerSlide = Math.min(visibleItems, totalItems); // Adjust dynamically
+            let currentIndex = 0;
+        
+            function updateCarousel() {
+                const offset = -(currentIndex * (100 / itemsPerSlide));
+                carouselWrapper.style.transform = `translateX(${offset}%)`;
+            }
+        
+            // nextBtn.addEventListener("click", () => {
+            //     if (currentIndex < totalItems - itemsPerSlide) {
+            //         currentIndex++;
+            //     } else {
+            //         currentIndex = 0; 
+            //     }
+            //     updateCarousel();
+            // });
+        
+            // prevBtn.addEventListener("click", () => {
+            //     if (currentIndex > 0) {
+            //         currentIndex--;
+            //     } else {
+            //         currentIndex = totalItems - itemsPerSlide;
+            //     }
+            //     updateCarousel();
+            // });
+        
+            // Auto-play carousel
+            setInterval(() => {
+                if (currentIndex < totalItems - itemsPerSlide) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            }, 5000); // Change slide every 5 seconds
+        });
+        
+            </script>
+    </body>
+</html>
