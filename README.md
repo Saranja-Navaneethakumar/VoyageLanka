@@ -76,7 +76,9 @@ const firebaseConfig = {
 
 ## Screenshots
 
-*Add screenshots of your application here*
+![Home Pages](assets/images/index-1.png)(assets/images/index.png)
+![Destination Page](assets/images/destination-1.png)
+
 
 ---
 
