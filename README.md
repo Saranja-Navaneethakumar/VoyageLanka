@@ -12,8 +12,8 @@ A full-stack travel web application designed to help users explore and plan trip
 
 * User Authentication (Login / Signup)
 * Real-time database integration
-* Explore travel destinations in Sri Lanka
-* Responsive design for all devices
+* Explore popular travel destinations in Sri Lanka
+* Responsive design
 * Cloud deployment using Netlify
 * Dynamic data handling with Firebase
 
@@ -53,7 +53,7 @@ cd voyage-lanka-travel
 ```
 
 3. Open the project:
-Simply open index.html in your browser
+ * Simply open index.html in your browser
 
 4. Set up Firebase:
 
@@ -61,7 +61,17 @@ Simply open index.html in your browser
 * Enable Authentication
 * Enable Realtime Database
 * Replace the configuration inside `firebase-config.js` with your Firebase credentials
-
+```bash
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  databaseURL: "YOUR_DATABASE_URL",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+```
 ---
 
 ## Screenshots
@@ -75,6 +85,7 @@ Simply open index.html in your browser
 * User reviews & ratings
 * Interactive maps integration
 * Payment gateway support
+* Email Notification
 
 ---
 
