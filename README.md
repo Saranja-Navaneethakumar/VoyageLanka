@@ -26,6 +26,7 @@ A full-stack travel web application designed to help users explore and plan trip
 * HTML5
 * CSS3
 * JavaScript
+* Fontawesome Icons
 
 **Backend / Services:**
 
@@ -76,8 +77,18 @@ const firebaseConfig = {
 
 ## Screenshots
 
-![Home Pages](assets/images/index-1.png)(assets/images/index.png)
-![Destination Page](assets/images/destination-1.png)
+![Home Pages-1](assets/images/index-1.png)
+![Home Pages-2](assets/images/index-2.png)
+![Home Pages-3](assets/images/index-3.png)
+![Destination Page-1](assets/images/destination-1.png)
+![Destination Page-2](assets/images/destination-2.png)
+![Destination Page-3](assets/images/destination-3.png)
+![Tour-1](assets/images/tour-1.png)
+![Tour-2](assets/images/tour-2.png)
+![Tour-3](assets/images/tour-3.png)
+![hotels](assets/images/hotels.png)
+![Booking](assets/images/booking.png)
+![ContactUs](assets/images/contactus.png)
 
 
 ---
